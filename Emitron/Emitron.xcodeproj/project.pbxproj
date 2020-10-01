@@ -248,6 +248,19 @@
 		22F2C46123EF7A27007ED4A1 /* ContentSubscriptionPlan+Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F2C46023EF7A27007ED4A1 /* ContentSubscriptionPlan+Request.swift */; };
 		22FDB2EE23CAC7E6001F883E /* ChildContentListingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FDB2ED23CAC7E6001F883E /* ChildContentListingView.swift */; };
 		494A79A82465C8C90097E8F4 /* RefreshableTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494A79A72465C8C90097E8F4 /* RefreshableTestCase.swift */; };
+		594320AC252487D500A31CA5 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 594320AB252487D500A31CA5 /* WidgetKit.framework */; };
+		594320AE252487D500A31CA5 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 594320AD252487D500A31CA5 /* SwiftUI.framework */; };
+		594320B1252487D500A31CA5 /* EmitronWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594320B0252487D500A31CA5 /* EmitronWidget.swift */; };
+		594320B3252487D800A31CA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 594320B2252487D800A31CA5 /* Assets.xcassets */; };
+		594320B7252487D800A31CA5 /* EmitronWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 594320AA252487D500A31CA5 /* EmitronWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		594320C92524951600A31CA5 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D4529B22CAB67900BFB812 /* Date+Extensions.swift */; };
+		594320CA2524951600A31CA5 /* TimeInterval+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C0F0DE22D5FD4C00012839 /* TimeInterval+Extensions.swift */; };
+		594320CB2524951600A31CA5 /* DateFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D4529722CAB3F600BFB812 /* DateFormatter+Extensions.swift */; };
+		594320D02524952C00A31CA5 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7DC5222C7B3FE006DD325 /* Color+Extensions.swift */; };
+		594320D12524952C00A31CA5 /* Font+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7DC5422C7B408006DD325 /* Font+Extensions.swift */; };
+		594320D72524979F00A31CA5 /* WidgetContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594320D62524979F00A31CA5 /* WidgetContent.swift */; };
+		594320D82524979F00A31CA5 /* WidgetContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594320D62524979F00A31CA5 /* WidgetContent.swift */; };
+		594320E2252498A500A31CA5 /* EntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594320E1252498A500A31CA5 /* EntryView.swift */; };
 		8B283DEF23169A1F001F1B17 /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B283DEE23169A1E001F1B17 /* ProgressBarView.swift */; };
 		8B28D2B323546D0F005FCC08 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B28D2B223546D0F005FCC08 /* ActivityIndicator.swift */; };
 		8B7E96DD2357A65F0083DA38 /* ProTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7E96DC2357A65F0083DA38 /* ProTag.swift */; };
@@ -351,7 +364,28 @@
 			remoteGlobalIDString = B6D7DC2A22C79743006DD325;
 			remoteInfo = emitron;
 		};
+		594320B5252487D800A31CA5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B6D7DC2322C79743006DD325 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 594320A9252487D500A31CA5;
+			remoteInfo = EmitronWidgetExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		594320BC252487D800A31CA5 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				594320B7252487D800A31CA5 /* EmitronWidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		220D971023C032DF005C746C /* Domain+Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Domain+Mocks.swift"; sourceTree = "<group>"; };
@@ -588,6 +622,14 @@
 		22F2C46023EF7A27007ED4A1 /* ContentSubscriptionPlan+Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentSubscriptionPlan+Request.swift"; sourceTree = "<group>"; };
 		22FDB2ED23CAC7E6001F883E /* ChildContentListingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildContentListingView.swift; sourceTree = "<group>"; };
 		494A79A72465C8C90097E8F4 /* RefreshableTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshableTestCase.swift; sourceTree = "<group>"; };
+		594320AA252487D500A31CA5 /* EmitronWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = EmitronWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		594320AB252487D500A31CA5 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		594320AD252487D500A31CA5 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		594320B0252487D500A31CA5 /* EmitronWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmitronWidget.swift; sourceTree = "<group>"; };
+		594320B2252487D800A31CA5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		594320B4252487D800A31CA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		594320D62524979F00A31CA5 /* WidgetContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetContent.swift; sourceTree = "<group>"; };
+		594320E1252498A500A31CA5 /* EntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryView.swift; sourceTree = "<group>"; };
 		8B283DEE23169A1E001F1B17 /* ProgressBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
 		8B28D2B223546D0F005FCC08 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		8B7E96DC2357A65F0083DA38 /* ProTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProTag.swift; sourceTree = "<group>"; };
@@ -700,6 +742,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				2253632623A9EC8C0013F333 /* CombineExpectations in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		594320A7252487D500A31CA5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				594320AE252487D500A31CA5 /* SwiftUI.framework in Frameworks */,
+				594320AC252487D500A31CA5 /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -946,6 +997,8 @@
 		2256709E240AF3FD00BD05AE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				594320AB252487D500A31CA5 /* WidgetKit.framework */,
+				594320AD252487D500A31CA5 /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1323,6 +1376,18 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		594320AF252487D500A31CA5 /* EmitronWidget */ = {
+			isa = PBXGroup;
+			children = (
+				594320B0252487D500A31CA5 /* EmitronWidget.swift */,
+				594320D62524979F00A31CA5 /* WidgetContent.swift */,
+				594320E1252498A500A31CA5 /* EntryView.swift */,
+				594320B2252487D800A31CA5 /* Assets.xcassets */,
+				594320B4252487D800A31CA5 /* Info.plist */,
+			);
+			path = EmitronWidget;
+			sourceTree = "<group>";
+		};
 		8B28D2B123546CFD005FCC08 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -1449,6 +1514,7 @@
 				B6D7DC2D22C79743006DD325 /* Emitron */,
 				22D176BE23460A060038333D /* emitronTests */,
 				225670A8240AFD3100BD05AE /* emitronScreenshots */,
+				594320AF252487D500A31CA5 /* EmitronWidget */,
 				B6D7DC2C22C79743006DD325 /* Products */,
 				2256709E240AF3FD00BD05AE /* Frameworks */,
 			);
@@ -1462,6 +1528,7 @@
 				B6D7DC2B22C79743006DD325 /* raywenderlich.app */,
 				22D176BD23460A060038333D /* emitronTests.xctest */,
 				225670A7240AFD3100BD05AE /* emitronScreenshots.xctest */,
+				594320AA252487D500A31CA5 /* EmitronWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1757,6 +1824,23 @@
 			productReference = 22D176BD23460A060038333D /* emitronTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		594320A9252487D500A31CA5 /* EmitronWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 594320B8252487D800A31CA5 /* Build configuration list for PBXNativeTarget "EmitronWidgetExtension" */;
+			buildPhases = (
+				594320A6252487D500A31CA5 /* Sources */,
+				594320A7252487D500A31CA5 /* Frameworks */,
+				594320A8252487D500A31CA5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EmitronWidgetExtension;
+			productName = EmitronWidgetExtension;
+			productReference = 594320AA252487D500A31CA5 /* EmitronWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		B6D7DC2A22C79743006DD325 /* emitron */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B6D7DC3F22C79745006DD325 /* Build configuration list for PBXNativeTarget "emitron" */;
@@ -1764,10 +1848,12 @@
 				B6D7DC2722C79743006DD325 /* Sources */,
 				B6D7DC2822C79743006DD325 /* Frameworks */,
 				B6D7DC2922C79743006DD325 /* Resources */,
+				594320BC252487D800A31CA5 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				594320B6252487D800A31CA5 /* PBXTargetDependency */,
 			);
 			name = emitron;
 			packageProductDependencies = (
@@ -1787,7 +1873,7 @@
 		B6D7DC2322C79743006DD325 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1130;
+				LastSwiftUpdateCheck = 1200;
 				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = Razeware;
 				TargetAttributes = {
@@ -1798,6 +1884,9 @@
 					22D176BC23460A060038333D = {
 						CreatedOnToolsVersion = 11.1;
 						TestTargetID = B6D7DC2A22C79743006DD325;
+					};
+					594320A9252487D500A31CA5 = {
+						CreatedOnToolsVersion = 12.0;
 					};
 					B6D7DC2A22C79743006DD325 = {
 						CreatedOnToolsVersion = 11.0;
@@ -1827,6 +1916,7 @@
 				B6D7DC2A22C79743006DD325 /* emitron */,
 				22D176BC23460A060038333D /* emitronTests */,
 				225670A6240AFD3100BD05AE /* emitronScreenshots */,
+				594320A9252487D500A31CA5 /* EmitronWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -1853,6 +1943,14 @@
 				221E60A52385790B00E92155 /* Attachment_Stream.json in Resources */,
 				221E60A42385790B00E92155 /* Attachment_Downloads.json in Resources */,
 				223D77C623B0C301005BE95D /* Categories.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		594320A8252487D500A31CA5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				594320B3252487D800A31CA5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1956,6 +2054,21 @@
 				2288EF142374298200514043 /* ContentTest.swift in Sources */,
 				22D176CB23460AFE0038333D /* PersistenceStore+UserKeychainTest.swift in Sources */,
 				494A79A82465C8C90097E8F4 /* RefreshableTestCase.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		594320A6252487D500A31CA5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				594320D12524952C00A31CA5 /* Font+Extensions.swift in Sources */,
+				594320D02524952C00A31CA5 /* Color+Extensions.swift in Sources */,
+				594320B1252487D500A31CA5 /* EmitronWidget.swift in Sources */,
+				594320CA2524951600A31CA5 /* TimeInterval+Extensions.swift in Sources */,
+				594320CB2524951600A31CA5 /* DateFormatter+Extensions.swift in Sources */,
+				594320D82524979F00A31CA5 /* WidgetContent.swift in Sources */,
+				594320C92524951600A31CA5 /* Date+Extensions.swift in Sources */,
+				594320E2252498A500A31CA5 /* EntryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2192,6 +2305,7 @@
 				22F2C45D23EF79D8007ED4A1 /* ContentType+Request.swift in Sources */,
 				B6C0F0DF22D5FD4C00012839 /* TimeInterval+Extensions.swift in Sources */,
 				B6FC15D522CB68E20078CEDB /* Service.swift in Sources */,
+				594320D72524979F00A31CA5 /* WidgetContent.swift in Sources */,
 				B6DF2FAF22CA498B0081A3A3 /* User.swift in Sources */,
 				2213195423EB7A6A00F15816 /* NumberIconView.swift in Sources */,
 			);
@@ -2209,6 +2323,11 @@
 			isa = PBXTargetDependency;
 			target = B6D7DC2A22C79743006DD325 /* emitron */;
 			targetProxy = 22D176C223460A060038333D /* PBXContainerItemProxy */;
+		};
+		594320B6252487D800A31CA5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 594320A9252487D500A31CA5 /* EmitronWidgetExtension */;
+			targetProxy = 594320B5252487D800A31CA5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -2340,13 +2459,14 @@
 		228D0FED23E030CA00CEA6F1 /* Beta */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon${BUNDLE_ID_SUFFIX}";
 				BUNDLE_ID_SUFFIX = .beta;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "Emitron/Preview\\ Content";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = N4Q7U8RR8X;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Emitron/Support Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2422,6 +2542,72 @@
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/raywenderlich.app/raywenderlich";
 			};
 			name = Release;
+		};
+		594320B9252487D800A31CA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N4Q7U8RR8X;
+				INFOPLIST_FILE = EmitronWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hdwebsoft.emitron.ios.dev.EmitronWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		594320BA252487D800A31CA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N4Q7U8RR8X;
+				INFOPLIST_FILE = EmitronWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hdwebsoft.emitron.ios.dev.EmitronWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		594320BB252487D800A31CA5 /* Beta */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N4Q7U8RR8X;
+				INFOPLIST_FILE = EmitronWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hdwebsoft.emitron.ios.dev.EmitronWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Beta;
 		};
 		B6D7DC3D22C79745006DD325 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -2544,6 +2730,7 @@
 		B6D7DC4022C79745006DD325 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon${BUNDLE_ID_SUFFIX}";
 				BUNDLE_ID_SUFFIX = .dev;
 				CODE_SIGN_IDENTITY = "Apple Development";
@@ -2551,7 +2738,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_ASSET_PATHS = "Emitron/Preview\\ Content";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = N4Q7U8RR8X;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Emitron/Support Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2559,7 +2746,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.4;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.razeware.emitron.ios$(BUNDLE_ID_SUFFIX)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hdwebsoft.emitron.ios.dev;
 				PRODUCT_MODULE_NAME = Emitron;
 				PRODUCT_NAME = raywenderlich;
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -2571,13 +2758,14 @@
 		B6D7DC4122C79745006DD325 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon${BUNDLE_ID_SUFFIX}";
 				BUNDLE_ID_SUFFIX = "";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "Emitron/Preview\\ Content";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = N4Q7U8RR8X;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Emitron/Support Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2613,6 +2801,16 @@
 				22D176C423460A060038333D /* Debug */,
 				22D176C523460A060038333D /* Release */,
 				228D0FEE23E030CA00CEA6F1 /* Beta */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		594320B8252487D800A31CA5 /* Build configuration list for PBXNativeTarget "EmitronWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				594320B9252487D800A31CA5 /* Debug */,
+				594320BA252487D800A31CA5 /* Release */,
+				594320BB252487D800A31CA5 /* Beta */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
