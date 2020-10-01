@@ -28,6 +28,15 @@
 
 import WidgetKit
 import SwiftUI
+import Foundation
+
+extension FileManager {
+  static func sharedContainerURL() -> URL {
+    return FileManager.default.containerURL (
+      forSecurityApplicationGroupIdentifier: "group.com.hdwebsoft.emitron.contents"
+    )!
+  }
+}
 
 let snapshotEntry = WidgetContent(
   name: "iOS Concurrency with GCD and Operations",
@@ -51,19 +60,33 @@ struct Provider: TimelineProvider {
   }
   
   func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
-    //        var entries: [WidgetContent] = []
-    //
-    //        // Generate a timeline consisting of five entries an hour apart, starting from the current date.
-    //        let currentDate = Date()
-    //        for hourOffset in 0 ..< 5 {
-    //            let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-    //            let entry = WidgetContent(date: entryDate)
-    //            entries.append(entry)
-    //        }
     
-    let entries = [snapshotEntry]
+    var entries = readContents()
+    // Generate a timeline by setting entry dates interval seconds apart,
+    // starting from the current date.
+    let currentDate = Date()
+    let interval = 5
+    for index in 0 ..< entries.count {
+      entries[index].date = Calendar.current.date(byAdding: .second, value: index * interval, to: currentDate)!
+    }
     let timeline = Timeline(entries: entries, policy: .atEnd)
     completion(timeline)
+  }
+  
+  func readContents() -> [WidgetContent] {
+    var contents: [WidgetContent] = []
+    let archiveURL = FileManager.sharedContainerURL().appendingPathComponent("contents.json")
+    print(">>>> \(archiveURL)")
+    
+    let decoder = JSONDecoder()
+    if let codeData = try? Data(contentsOf: archiveURL) {
+      do {
+        contents = try decoder.decode([WidgetContent].self, from: codeData)
+      } catch {
+        print("Error: Can't decode contents")
+      }
+    }
+    return contents
   }
 }
 
@@ -92,6 +115,7 @@ struct EmitronWidget: Widget {
     }
     .configurationDisplayName("RW Tutorials")
     .description("See the latest video tutorials.")
+    .supportedFamilies([.systemSmall, .systemMedium, .systemLarge])
   }
 }
 

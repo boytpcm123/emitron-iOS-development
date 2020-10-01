@@ -27,6 +27,15 @@
 // THE SOFTWARE.
 
 import Combine
+import Foundation
+
+extension FileManager {
+  static func sharedContainerURL() -> URL {
+    return FileManager.default.containerURL (
+      forSecurityApplicationGroupIdentifier: "group.com.hdwebsoft.emitron.contents"
+    )!
+  }
+}
 
 class ContentRepository: ObservableObject, ContentPaginatable {
   let repository: Repository
@@ -43,6 +52,27 @@ class ContentRepository: ObservableObject, ContentPaginatable {
   var contents: [ContentListDisplayable] = [] {
     willSet {
       objectWillChange.send()
+    }
+    didSet {
+      writeContents()
+    }
+  }
+  
+  func writeContents() {
+    let widgetContents = contents.map {
+      WidgetContent(name: $0.name, cardViewSubtitle: $0.cardViewSubtitle, descriptionPlainText: $0.descriptionPlainText, releasedAtDateTimeString: $0.releasedAtDateTimeString)
+    }
+    let archiveURL = FileManager.sharedContainerURL()
+      .appendingPathComponent("contents.json")
+    print(">>> \(archiveURL)")
+    let encoder = JSONEncoder()
+    if let dataToSave = try? encoder.encode(widgetContents) {
+      do {
+        try dataToSave.write(to: archiveURL)
+      } catch {
+        print("Error: Can't write contents")
+        return
+      }
     }
   }
 

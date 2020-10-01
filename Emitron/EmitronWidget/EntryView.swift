@@ -26,10 +26,9 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-
 import SwiftUI
 
-struct EntryView {
+struct EntryView: View {
   let model: WidgetContent
 
   var body: some View {
