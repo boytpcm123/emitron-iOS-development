@@ -29,60 +29,74 @@
 import WidgetKit
 import SwiftUI
 
+let snapshotEntry = WidgetContent(
+  name: "iOS Concurrency with GCD and Operations",
+  cardViewSubtitle: "iOS & Swift",
+  descriptionPlainText: """
+    Learn how to add concurrency to your apps! \
+    Keep your app's UI responsive to give your \
+    users a great user experience.
+    """,
+  releasedAtDateTimeString: "Jun 23 2020 • Video Course (3 hrs, 21 mins)")
+
+
 struct Provider: TimelineProvider {
-    func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(date: Date())
-    }
-
-    func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        let entry = SimpleEntry(date: Date())
-        completion(entry)
-    }
-
-    func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
-        var entries: [SimpleEntry] = []
-
-        // Generate a timeline consisting of five entries an hour apart, starting from the current date.
-        let currentDate = Date()
-        for hourOffset in 0 ..< 5 {
-            let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            let entry = SimpleEntry(date: entryDate)
-            entries.append(entry)
-        }
-
-        let timeline = Timeline(entries: entries, policy: .atEnd)
-        completion(timeline)
-    }
+  func placeholder(in context: Context) -> WidgetContent {
+    snapshotEntry
+  }
+  
+  func getSnapshot(in context: Context, completion: @escaping (WidgetContent) -> ()) {
+    let entry = snapshotEntry
+    completion(entry)
+  }
+  
+  func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
+    //        var entries: [WidgetContent] = []
+    //
+    //        // Generate a timeline consisting of five entries an hour apart, starting from the current date.
+    //        let currentDate = Date()
+    //        for hourOffset in 0 ..< 5 {
+    //            let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
+    //            let entry = WidgetContent(date: entryDate)
+    //            entries.append(entry)
+    //        }
+    
+    let entries = [snapshotEntry]
+    let timeline = Timeline(entries: entries, policy: .atEnd)
+    completion(timeline)
+  }
 }
 
-struct SimpleEntry: TimelineEntry {
-    let date: Date
-}
+//struct WidgetContent: TimelineEntry {
+//    let date: Date
+//}
 
-struct EmitronWidgetEntryView : View {
-    var entry: Provider.Entry
-
-    var body: some View {
-        Text(entry.date, style: .time)
-    }
-}
+//struct EmitronWidgetEntryView : View {
+//    var entry: Provider.Entry
+//
+//    var body: some View {
+//        Text(entry.date, style: .time)
+//    }
+//}
 
 @main
 struct EmitronWidget: Widget {
-    let kind: String = "EmitronWidget"
-
-    var body: some WidgetConfiguration {
-        StaticConfiguration(kind: kind, provider: Provider()) { entry in
-            EmitronWidgetEntryView(entry: entry)
-        }
-        .configurationDisplayName("My Widget")
-        .description("This is an example widget.")
+  private let kind: String = "EmitronWidget"
+  
+  public var body: some WidgetConfiguration {
+    StaticConfiguration(
+      kind: kind,
+      provider: Provider()
+    ) { entry in
+      EntryView(model: entry)
     }
+    .configurationDisplayName("RW Tutorials")
+    .description("See the latest video tutorials.")
+  }
 }
 
 struct EmitronWidget_Previews: PreviewProvider {
-    static var previews: some View {
-        EmitronWidgetEntryView(entry: SimpleEntry(date: Date()))
-            .previewContext(WidgetPreviewContext(family: .systemSmall))
-    }
+  static var previews: some View {
+    EntryView(model: snapshotEntry)
+  }
 }

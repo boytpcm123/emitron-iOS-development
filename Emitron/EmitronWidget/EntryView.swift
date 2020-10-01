@@ -31,12 +31,12 @@ import SwiftUI
 
 struct EntryView {
   let model: WidgetContent
-  
+
   var body: some View {
     VStack(alignment: .leading) {
       Text(model.name)
         .font(.uiTitle4)
-        .lineLimit(/*@START_MENU_TOKEN@*/2/*@END_MENU_TOKEN@*/)
+        .lineLimit(2)
         .fixedSize(horizontal: false, vertical: true)
         .padding([.trailing], 15)
         .foregroundColor(.titleText)
@@ -57,16 +57,9 @@ struct EntryView {
         .font(.uiCaption)
         .lineLimit(1)
         .foregroundColor(.contentText)
-        
     }
     .background(Color.cardBackground)
     .padding()
     .cornerRadius(6)
-  }
-}
-
-struct EntryView_Previews: PreviewProvider {
-  static var previews: some View {
-    /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
   }
 }
